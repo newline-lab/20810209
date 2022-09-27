@@ -1,9 +1,1 @@
-Template for the Read the Docs tutorial
-=======================================
-
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
-
-Read the tutorial here:
-
-https://docs.readthedocs.io/en/stable/tutorial/
+This repository hosts lab materials for 20810209 Complex robotic systems laboratory class at Universtà degli studi Roma Tre.
