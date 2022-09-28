@@ -5,12 +5,12 @@ This repository hosts lab materials for 20810209 Complex robotic systems laborat
 Turtlebo Setup Source
 ----------
 
-- Source Code: https://github.com/newline-lab/turtlebot2-noetic
+* Source Code: https://github.com/newline-lab/turtlebot2-noetic
 
 Support
 -------
 
 If you are having issues, please let us know.
 contacts:   
-- jgallou@os.uniroma3.com
-- aarlotta@os.uniroma3.com
+* jgallou@os.uniroma3.com
+* aarlotta@os.uniroma3.com
