@@ -11,6 +11,7 @@ Support
 -------
 
 If you are having issues, please let us know.
-contacts:   
+contacts:
+
 * jgallou@os.uniroma3.com
 * aarlotta@os.uniroma3.com
