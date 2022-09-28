@@ -1,4 +1,4 @@
-Logistic: set up the environment
+Logistics
 ========
 Virtual Machine
 ---------
