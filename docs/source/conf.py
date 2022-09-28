@@ -3,8 +3,8 @@
 # -- Project information
 
 project = '20810209-CRSL'
-copyright = '2021, Graziella'
-author = 'Graziella'
+copyright = '2022, UNIROMA3'
+author = 'IGEA - UNIROMA3'
 
 release = '0.1'
 version = '0.1.0'
