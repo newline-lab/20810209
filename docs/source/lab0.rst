@@ -3,6 +3,7 @@ ROS Publishers and Subscribers
 ========
 
 Overview
+#######
 
 In this lab, we are going to create a ROS workspace and a ROS package, launch a Turtlebot robot and play with it, launch a robot arm and play with it.
 
