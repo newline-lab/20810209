@@ -1,5 +1,5 @@
 
-Lab #0: ROS Bag
+Lab 0: ROS Bag
 ========
 
 Overview
