@@ -8,7 +8,7 @@
     
 This repository hosts lab materials for 20810209 Complex robotic systems laboratory class at Universtà degli studi Roma Tre.
     
-Turtlebo Setup Source
+Turtlebot Setup Source
 ----------
 
 * Source Code: https://github.com/newline-lab/turtlebot2-noetic
