@@ -21,9 +21,7 @@ Stream and record data
 ####
 
 * Now let's plug the Orbec3D camera to your PC (https://orbbec3d.com/index/Product/info.html?cate=38&id=36) and run astra_camera nodes:
-.. code-block:: bash
-  roslaunch astra_camera astra.launch 
+.. code-block:: bash $ roslaunch astra_camera astra.launch .
 * Check the node and the topics generate by launching the previous file.
 * Record stremed data. Let's create three different bags: all_topics_bag, rgb_only_bag, depth_only_bag. Use rosbash commands. 
-.. code-block:: bash
-  rosbag record -e <continue>
+.. code-block:: bash $ rosbag record -e <continue> .
