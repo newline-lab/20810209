@@ -3,8 +3,7 @@
 .. toctree::
     :maxdepth: 2
     :hidden:
-
-    logistics
+    
     lab0
     
 This repository hosts lab materials for 20810209 Complex robotic systems laboratory class at Universtà degli studi Roma Tre.
