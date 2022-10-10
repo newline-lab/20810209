@@ -14,13 +14,13 @@ Preview: Next week we are going to learn how to write ROS scripts to send and re
 Set up Drivers for Orbbec Astra Devices
 #####
 
-Ros wiki has a page dedicated to Orbbec Astra Devices: http://wiki.ros.org/astra_camera . Here you can find the instructions to install the required drivers.
+In Ros docs there is a `wiki for Orbbec Astra Devices <http://wiki.ros.org/astra_camera>`_ . Here you can find the instructions to install the required drivers.
 The related  GitHub repository is  `here <https://github.com/orbbec/ros_astra_camera>`_.
 
 Stream and record data
 ####
 
-* Now let's plug the Orbec3D camera to your PC (https://orbbec3d.com/index/Product/info.html?cate=38&id=36) and run astra_camera nodes:
+* Now let's plug the `Orbec3D camera <https://orbbec3d.com/index/Product/info.html?cate=38&id=36>`_ to your pc and run astra_camera nodes:
 .. ::
   $ roslaunch astra_camera astra.launch
 * Check the node and the topics generate by launching the previous file.
