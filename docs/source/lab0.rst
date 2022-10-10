@@ -5,11 +5,11 @@ Lab 0: ROS Bag
 Overview
 #######
 
-In this lab we are going to create a rosbag file filled with data streamed from Orbec Camera sensor.
+In this lab we are going to create `rosbag <http://wiki.ros.org/rosbag>`_ files filled with data streamed from Orbec Camera sensor.
 
 While following the step-by-step tutorials, please take your time to think about what you are doing and what happens in each step, with the help of Google if necessary.
 
-Preview: Next week we are going to learn how to write ROS scripts to send and receive messages; also, if time permits, we will create a simple service and implement a simple client-server routine.
+*Preview:* Next lecture we are going to learn how to write ROS scripts to send and receive messages; also, if time permits, we will create a simple service and implement a simple client-server routine.
 
 Set up Drivers for Orbbec Astra Devices
 #####
