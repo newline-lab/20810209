@@ -14,7 +14,7 @@ While following the step-by-step tutorials, please take your time to think about
 Set up Drivers for Orbbec Astra Devices
 #####
 
-In Ros docs there is a `wiki for Orbbec Astra Devices <http://wiki.ros.org/astra_camera>`_ . Here you can find the instructions to install the required drivers.
+In Ros docs there is a `wiki for Orbbec Astra Devices <http://wiki.ros.org/astra_camera>`_, where you can find the instructions to install the required drivers.
 The related  GitHub repository is  `here <https://github.com/orbbec/ros_astra_camera>`_.
 
 Stream and record data
