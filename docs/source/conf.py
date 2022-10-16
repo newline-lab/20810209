@@ -11,7 +11,7 @@ version = '0.1.0'
 
 # -- General configuration
 
-copybutton_prompt_text = "$"
+copybutton_prompt_text = "$ "
 
 extensions = [
     'sphinx.ext.duration',
