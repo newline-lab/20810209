@@ -18,7 +18,7 @@ Let create a file in the package that you created for this course:
 ::
   $ touch publisher.cpp
 In this file will write the code related to the publisher's node.
-::
+..  code-block::
   #include "ros/ros.h"
   #include "geometry_msgs/Twist.h"  // For geometry_msgs::Twist
 
