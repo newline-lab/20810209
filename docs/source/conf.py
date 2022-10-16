@@ -28,7 +28,7 @@ intersphinx_disabled_domains = ['std']
 
 templates_path = ['_templates']
 
-copybutton_prompt_text = "$"
+copybutton_prompt_text = "$ "
 
 # -- Options for HTML output
 
