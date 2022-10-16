@@ -5,6 +5,7 @@
     :hidden:
     
     lab0
+    lab1
     
 This repository hosts lab materials for 20810209 Complex robotic systems laboratory class at Universtà degli studi Roma Tre.
     
