@@ -4,7 +4,7 @@
     :maxdepth: 2
     :hidden:
     
-    logistic
+    logistics
     lab0
     lab1
     
