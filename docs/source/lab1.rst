@@ -22,8 +22,6 @@ Let create a file in the package that you created for this course:
   $ source devel/setup.bash
   $ rosrun turtlebot_package publisher
   
-   >>> touch publisher.cpp
-   >>> dir()
 In this file will write the code related to the publisher's node.
 
 .. code-block:: cpp
