@@ -1,3 +1,4 @@
+{% extends "basic/layout.html" %}
 # Configuration file for the Sphinx documentation builder.
 
 # -- Project information
