@@ -6,8 +6,8 @@ Set up the Turlebot workspace
 
 Let's create and build a catkin workspace with all the turtlebot materials inside:
 
-.. code-block:: pygments.lexers.shell.BashSessionLexer
-
+.. code-block:: bash
+  
    $ mkdir -p ~/turtlebot_ws/src
    $ git clone --recursive https://github.com/newline-lab/turtlebot2-noetic.git
    $ cd ..
@@ -28,13 +28,13 @@ Set up the Turlebot workspace
 
 Let's launch the turtlebot bringup:
 
-.. code-block:: pygments.lexers.shell.BashSessionLexer
-   
+.. code-block:: bash
+  
    $ roslaunch turtlebot_bringup minimal.launch
 
 In an other terminal we can open the keyboard teleop to be able to move the robot around with the keyboard:
 
-.. code-block:: pygments.lexers.shell.BashSessionLexer
-   
+.. code-block:: bash
+  
    $ roslaunch turtlebot_teleop keyboard_teleop.launch
 
