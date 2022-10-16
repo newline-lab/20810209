@@ -16,10 +16,12 @@ Creating a Publisher
 publisher node which will continually broadcast a message.
 Let create a file in the package that you created for this course:
 
-.. code-block:: bash
+.. code-block:: $ cd turtlebot_ws/
+$ source devel/setup.bash
+$ rosrun turtlebot_package publisher
   
-  >>> touch publisher.cpp
-  
+   >>> touch publisher.cpp
+   >>> dir()
 In this file will write the code related to the publisher's node.
 
 .. code-block:: cpp
@@ -130,9 +132,9 @@ Make sure that a roscore is up and running launching :code:`roscore`, :code:`tur
 
 .. code-block::
   
-  $ cd turtlebot_ws/
-  $ source devel/setup.bash
-  $ rosrun turtlebot_package publisher
+   $ cd turtlebot_ws/
+   $ source devel/setup.bash
+   $ rosrun turtlebot_package publisher
 
 Writing a obstacle avoidance script
 #####
