@@ -15,7 +15,9 @@ Creating a Publisher
 ”Node” is the ROS term for an executable that is connected to the ROS network. Here we’ll create a
 publisher node which will continually broadcast a message.
 Let create a file in the package that you created for this course:
-::
+
+.. code-block:: pygments.lexers.shell.BashLexer
+
   $ touch publisher.cpp
 In this file will write the code related to the publisher's node.
 
@@ -124,7 +126,9 @@ Examining the Simple Publisher and Subscriber
 Now you can do :bash:`catkin_make` to compile everything.
 
 Make sure that a roscore is up and running launching :bash:`roscore`, :bash:`turtlebot_package subscriber` and then
-::
+
+.. code-block:: pygments.lexers.shell.BashLexer
+
   cd turtlebot_ws/
   source devel/setup.bash
   rosrun turtlebot_package publisher
