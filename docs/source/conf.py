@@ -34,5 +34,5 @@ html_theme = 'sphinx_rtd_theme'
 
 # -- Options for EPUB output
 
-copybutton_prompt_text = "$ "
-epub_show_urls = 'footnote'
+copybutton_prompt_text = r'\$ '
+copybutton_prompt_is_regexp = True
