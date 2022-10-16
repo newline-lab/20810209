@@ -1,5 +1,5 @@
 # Configuration file for the Sphinx documentation builder.
-
+import sphinx-copybutton
 # -- Project information
 
 project = '20810209-CRSL'
