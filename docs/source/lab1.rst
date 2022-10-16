@@ -16,7 +16,7 @@ Creating a Publisher
 publisher node which will continually broadcast a message.
 Let create a file in the package that you created for this course:
 
-.. code-block:: pygments.lexers.shell.BashLexer
+.. code-block:: pygments.lexers.shell.BashSessionLexer
 
   $ touch publisher.cpp
 In this file will write the code related to the publisher's node.
@@ -95,7 +95,7 @@ Build the code
 You used *catkin_create_pkg* in a previous tutorial which created a package.xml and a CMakeLists.txt file for you.
 The generated CMakeLists.txt should look like this (with modifications from the Creating Msgs and Srvs tutorial and unused comments and examples removed):
 
-.. code-block:: pygments.lexers.make.CMakeLexer
+.. code-block:: pygments.lexers.shell.BashSessionLexer
 
   cmake_minimum_required(VERSION 2.8.3)
   project(turtlebot_package)
