@@ -1,8 +1,0 @@
-[build-system]
-requires = ["flit_core >=3.2,<4","sphinx_copybutton"]
-build-backend = "flit_core.buildapi"
-
-[project]
-name = "20810209"
-authors = [{name = "Arlotta", email = "aarlotta@os.romatre.it"}]
-dynamic = ["version", "description"]
