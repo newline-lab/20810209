@@ -27,7 +27,6 @@ intersphinx_mapping = {
 
 intersphinx_disabled_domains = ['std']
 
-templates_path = [% extends "basic/layout.html" %]
 
 html_theme = 'sphinx_rtd_theme'
 html_theme_options = {
