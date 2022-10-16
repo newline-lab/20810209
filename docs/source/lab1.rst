@@ -16,7 +16,7 @@ Creating a Publisher
 publisher node which will continually broadcast a message.
 Let create a file in the package that you created for this course:
 
-.. code-block:: pygments.lexers.shell.BashSessionLexer
+.. code-block::
   
   $ touch publisher.cpp
   
