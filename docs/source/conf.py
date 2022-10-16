@@ -1,4 +1,3 @@
-{% extends "basic/layout.html" %}
 # Configuration file for the Sphinx documentation builder.
 
 # -- Project information
@@ -28,14 +27,23 @@ intersphinx_mapping = {
 
 intersphinx_disabled_domains = ['std']
 
-templates_path = ['_templates']
+templates_path = [% extends "basic/layout.html" %]
+
+html_theme = 'sphinx_rtd_theme'
+html_theme_options = {
+    # General
+    'display_version'           : False,
+    'logo_only'                 : False,
+    'prev_next_buttons_location': 'both',
+    'style_external_links'      : True,
+    # Navigation
+    'collapse_navigation'        : False,
+    'navigation_depth'           : -1,
+    'sticky_navigation'          : True,
+    'titles_only'                : False,
+}
 
 # Exclude Python and Bash prompts when copying code blocks
 
 sphinx_copybutton_prompt_text = "... "
 
-# -- Options for HTML output
-
-html_theme = 'sphinx_rtd_theme'
-
-# -- Options for EPUB output
