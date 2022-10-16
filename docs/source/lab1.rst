@@ -15,10 +15,10 @@ Creating a Publisher
 ”Node” is the ROS term for an executable that is connected to the ROS network. Here we’ll create a
 publisher node which will continually broadcast a message.
 Let create a file in the package that you created for this course:
-::
+.. highlight:: cpp
   $ touch publisher.cpp
 In this file will write the code related to the publisher's node.
-..  code-block::
+code-block::
   #include "ros/ros.h"
   #include "geometry_msgs/Twist.h"  // For geometry_msgs::Twist
 
