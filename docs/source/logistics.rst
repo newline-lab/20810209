@@ -12,11 +12,11 @@ Let's create and build a catkin workspace with all the turtlebot materials insid
    $ git clone --recursive https://github.com/newline-lab/turtlebot2-noetic.git
    $ cd ..
    $ catkin_make
-
-Due to missing packages, it will for sure it will surely happen that errors will come out. Let's go trought the printed logs and try to understande which packages are needed to (c)make it work.
+.. warning::
+  Due to missing packages, it will for sure it will surely happen that errors will come out. Let's go trought the printed logs and try to understande which packages are needed to (c)make it work.
 
 .. toggle-header::
-    :header: ****
+    :header: √ ** **
    Download the :download:`install_ws.sh <files/install_ws.sh>` , extract and run is as executable:
    .. code-block:: pygments.lexers.shell.BashSessionLexer
 
