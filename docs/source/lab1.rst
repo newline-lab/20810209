@@ -125,9 +125,9 @@ Examining the Simple Publisher and Subscriber
 
 Now you can do :bash:`catkin_make` to compile everything.
 
-Make sure that a roscore is up and running launching :bash:`roscore`, :bash:`turtlebot_package subscriber` and then
+Make sure that a roscore is up and running launching :code:`roscore`, :code:`turtlebot_package subscriber` and then
 
-.. code-block:: pygments.lexers.shell.BashLexer
+.. code-block:: pygments.lexers.shell.BashSessionLexer
 
   cd turtlebot_ws/
   source devel/setup.bash
