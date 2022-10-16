@@ -18,7 +18,7 @@ Let create a file in the package that you created for this course:
 
 .. code-block:: bash
   
-  $ touch publisher.cpp
+  >>> touch publisher.cpp
   
 In this file will write the code related to the publisher's node.
 
@@ -128,7 +128,7 @@ Now you can do :code:`catkin_make` to compile everything.
 
 Make sure that a roscore is up and running launching :code:`roscore`, :code:`turtlebot_package subscriber` and then
 
-.. code-block:: bash
+.. code-block::
   
   $ cd turtlebot_ws/
   $ source devel/setup.bash
