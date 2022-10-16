@@ -11,6 +11,8 @@ version = '0.1.0'
 
 # -- General configuration
 
+copybutton_prompt_text = "$"
+
 extensions = [
     'sphinx.ext.duration',
     'sphinx.ext.doctest',
@@ -33,6 +35,3 @@ templates_path = ['_templates']
 html_theme = 'sphinx_rtd_theme'
 
 # -- Options for EPUB output
-
-copybutton_prompt_text = r'\$ '
-copybutton_prompt_is_regexp = True
