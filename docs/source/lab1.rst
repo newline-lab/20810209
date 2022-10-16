@@ -136,8 +136,3 @@ Make sure that a roscore is up and running launching :code:`roscore`, :code:`tur
    $ source devel/setup.bash
    $ rosrun turtlebot_package publisher
 
-Writing a obstacle avoidance script
-#####
-
-Now it's your turn, we would like you to write to own node. This node should be able to move the robot around with a linear velocity of 0.2 m/s and avoid obstacle by turning on itself with an angular velocity of 0.15 m/s. To get access to the obstacle you can use the node you wrote previously that gives you the data of the Hokuyo Laser scan mounted on the turtlebot.
-
