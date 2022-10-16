@@ -11,8 +11,6 @@ version = '0.1.0'
 
 # -- General configuration
 
-copybutton_prompt_text = "$ "
-
 extensions = [
     'sphinx.ext.duration',
     'sphinx.ext.doctest',
@@ -29,6 +27,8 @@ intersphinx_mapping = {
 intersphinx_disabled_domains = ['std']
 
 templates_path = ['_templates']
+
+copybutton_prompt_text = "$"
 
 # -- Options for HTML output
 
