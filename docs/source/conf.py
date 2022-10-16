@@ -31,7 +31,7 @@ templates_path = ['_templates']
 
 # Exclude Python and Bash prompts when copying code blocks
 
-copybutton_prompt_text = "... "
+sphinx_copybutton_prompt_text = "... "
 
 # -- Options for HTML output
 
