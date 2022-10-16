@@ -22,7 +22,7 @@ Let create a file in the package that you created for this course:
   $ source devel/setup.bash
   $ rosrun turtlebot_package publisher
   
-In this file will write the code related to the publisher's node.
+In this file we will write the code related to the publisher's node:
 
 .. code-block:: cpp
 
@@ -67,7 +67,7 @@ In this file will write the code related to the publisher's node.
 Creating a Subscriber
 ####
 
-As before create from commandline a new file, named *subscriber.cpp*.
+Let's create from command line a new file, named *subscriber.cpp*.
 Here's the template file you can use:
 
 .. code-block:: cpp
