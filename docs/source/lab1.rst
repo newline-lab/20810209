@@ -17,8 +17,9 @@ publisher node which will continually broadcast a message.
 Let create a file in the package that you created for this course:
 
 .. code-block:: pygments.lexers.shell.BashSessionLexer
-
+  
   $ touch publisher.cpp
+  
 In this file will write the code related to the publisher's node.
 
 .. code-block:: cpp
@@ -95,7 +96,7 @@ Build the code
 You used *catkin_create_pkg* in a previous tutorial which created a package.xml and a CMakeLists.txt file for you.
 The generated CMakeLists.txt should look like this (with modifications from the Creating Msgs and Srvs tutorial and unused comments and examples removed):
 
-.. code-block:: pygments.lexers.shell.BashSessionLexer
+.. code-block:: pygments.lexers.make.CMakeLexer
 
   cmake_minimum_required(VERSION 2.8.3)
   project(turtlebot_package)
@@ -123,15 +124,15 @@ The generated CMakeLists.txt should look like this (with modifications from the 
 Examining the Simple Publisher and Subscriber
 #####
 
-Now you can do :bash:`catkin_make` to compile everything.
+Now you can do :code:`catkin_make` to compile everything.
 
 Make sure that a roscore is up and running launching :code:`roscore`, :code:`turtlebot_package subscriber` and then
 
 .. code-block:: pygments.lexers.shell.BashSessionLexer
 
-  cd turtlebot_ws/
-  source devel/setup.bash
-  rosrun turtlebot_package publisher
+  $ cd turtlebot_ws/
+  $ source devel/setup.bash
+  $ rosrun turtlebot_package publisher
 
 Writing a obstacle avoidance script
 #####
