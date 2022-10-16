@@ -24,13 +24,14 @@ intersphinx_mapping = {
     'python': ('https://docs.python.org/3/', None),
     'sphinx': ('https://www.sphinx-doc.org/en/master/', None),
 }
+
 intersphinx_disabled_domains = ['std']
 
 templates_path = ['_templates']
 
 # Exclude Python and Bash prompts when copying code blocks
-copybutton_prompt_text = r">>> |\.\.\. |\$ |In \[\d*\]: | {2,5}\.\.\.: | {5,8}: "
-copybutton_prompt_is_regexp = True
+
+copybutton_prompt_text = "... "
 
 # -- Options for HTML output
 
