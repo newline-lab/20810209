@@ -16,9 +16,11 @@ Creating a Publisher
 publisher node which will continually broadcast a message.
 Let create a file in the package that you created for this course:
 
-.. code-block:: $ cd turtlebot_ws/
-$ source devel/setup.bash
-$ rosrun turtlebot_package publisher
+.. code-block:: 
+
+  $ cd turtlebot_ws/
+  $ source devel/setup.bash
+  $ rosrun turtlebot_package publisher
   
    >>> touch publisher.cpp
    >>> dir()
