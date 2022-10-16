@@ -28,7 +28,9 @@ intersphinx_disabled_domains = ['std']
 
 templates_path = ['_templates']
 
-copybutton_prompt_text = "$ "
+# Exclude Python and Bash prompts when copying code blocks
+copybutton_prompt_text = r'>>> |\$ '
+copybutton_prompt_is_regexp = True
 
 # -- Options for HTML output
 
