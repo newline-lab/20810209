@@ -25,8 +25,6 @@ intersphinx_mapping = {
     'sphinx': ('https://www.sphinx-doc.org/en/master/', None),
 }
 
-intersphinx_disabled_domains = ['std']
-
 
 html_theme = 'sphinx_rtd_theme'
 html_theme_options = {
