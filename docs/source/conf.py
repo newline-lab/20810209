@@ -43,6 +43,5 @@ html_theme_options = {
 }
 
 # Exclude Python and Bash prompts when copying code blocks
-
-sphinx_copybutton_prompt_text = "... "
-
+copybutton_prompt_text = r'>>> |\$ '
+copybutton_prompt_is_regexp = True
