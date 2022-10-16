@@ -18,7 +18,9 @@ Let create a file in the package that you created for this course:
 ::
   $ touch publisher.cpp
 In this file will write the code related to the publisher's node.
-.. highlight:: cpp
+
+.. code-block:: cpp
+
   #include "ros/ros.h"
   #include "geometry_msgs/Twist.h"  // For geometry_msgs::Twist
 
@@ -62,7 +64,9 @@ Creating a Subscriber
 
 As before create from commandline a new file, named *subscriber.cpp*.
 Here's the template file you can use:
-::
+
+.. code-block:: cpp
+
   #include <ros/ros.h> 
   #include <sensor_msgs/LaserScan.h>
 
@@ -87,8 +91,10 @@ Build the code
 #####
 
 You used *catkin_create_pkg* in a previous tutorial which created a package.xml and a CMakeLists.txt file for you.
-The generated CMakeLists.txt should look like this (with modifications from the Creating Msgs and Srvs tutorial and unused comments and examples removed): 
-::
+The generated CMakeLists.txt should look like this (with modifications from the Creating Msgs and Srvs tutorial and unused comments and examples removed):
+
+.. code-block:: pygments.lexers.make.CMakeLexer
+
   cmake_minimum_required(VERSION 2.8.3)
   project(turtlebot_package)
 
