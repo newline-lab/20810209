@@ -33,4 +33,6 @@ templates_path = ['_templates']
 html_theme = 'sphinx_rtd_theme'
 
 # -- Options for EPUB output
+
+copybutton_prompt_text = "$ "
 epub_show_urls = 'footnote'
