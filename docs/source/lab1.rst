@@ -15,10 +15,10 @@ Creating a Publisher
 ”Node” is the ROS term for an executable that is connected to the ROS network. Here we’ll create a
 publisher node which will continually broadcast a message.
 Let create a file in the package that you created for this course:
-.. code::
-  $ touch publisher.cpp
+  ::
+    $ touch publisher.cpp
 In this file will write the code related to the publisher's node.
-.. code::
+  ::
     #include "ros/ros.h"
     #include "geometry_msgs/Twist.h"  // For geometry_msgs::Twist
 
@@ -62,33 +62,33 @@ Creating a Subscriber
 
 As before create from commandline a new file, named *subscriber.cpp*.
 Here's the template file you can use:
-.. code::
-  #include <ros/ros.h> 
-  #include <sensor_msgs/LaserScan.h>
+  ::
+    #include <ros/ros.h> 
+    #include <sensor_msgs/LaserScan.h>
 
-  /**
-   * This tutorial demonstrates simple receipt of messages over the ROS system.
-   */
-  void chatterCallback(const sensor_msgs::LaserScan::ConstPtr& msg)
-  {
-    ROS_INFO("LaserScan (val,angle)=(%f,%f", msg->range_min,msg->angle_min);
-  }
+    /**
+     * This tutorial demonstrates simple receipt of messages over the ROS system.
+     */
+    void chatterCallback(const sensor_msgs::LaserScan::ConstPtr& msg)
+    {
+      ROS_INFO("LaserScan (val,angle)=(%f,%f", msg->range_min,msg->angle_min);
+    }
 
-  int main(int argc, char **argv)
-  {
-    ros::init(argc, argv, "subscriber");
-    ros::NodeHandle n;
-    ros::Subscriber sub = n.subscribe("/scan", 1000, chatterCallback); 
-    ros::spin(); 
-    return 0;
-  }
+    int main(int argc, char **argv)
+    {
+      ros::init(argc, argv, "subscriber");
+      ros::NodeHandle n;
+      ros::Subscriber sub = n.subscribe("/scan", 1000, chatterCallback); 
+      ros::spin(); 
+      return 0;
+    }
     
 Build the code
 #####
 
 You used *catkin_create_pkg* in a previous tutorial which created a package.xml and a CMakeLists.txt file for you.
 The generated CMakeLists.txt should look like this (with modifications from the Creating Msgs and Srvs tutorial and unused comments and examples removed): 
-.. code::
+  ::
     cmake_minimum_required(VERSION 2.8.3)
     project(turtlebot_package)
 
@@ -118,7 +118,7 @@ Examining the Simple Publisher and Subscriber
 Now you can do :bash:`catkin_make` to compile everything.
 
 Make sure that a roscore is up and running launching :bash:`roscore`, :bash:`turtlebot_package subscriber` and then
-.. code::
+  ::
     cd turtlebot_ws/
     source devel/setup.bash
     rosrun turtlebot_package publisher
