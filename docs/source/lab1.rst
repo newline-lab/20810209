@@ -9,7 +9,6 @@ Overview
 In this laboratory we will create a system to collect data from a lidar to make the Turtlebot move in such a way as to avoid obstacles.
 
 .. info:: 
-
   While following the step-by-step tutorials, please take your time to think about what you are doing and what happens in each step, with the help of Google if necessary.
   
 Creating a ros package
@@ -90,6 +89,21 @@ In this file we will write the code related to the publisher's node:
 
 The code explained
 ========
+First of all we want to send velocity commands to the turtlebot, so let's find out on which topic we have to publisher. In order to do that let's use the following command:
+
+
+.. code-block:: cpp
+
+    rostopic list
+
+You should have a lot of topic names printed. The one that allows us to send velocity commands is "cmd_vel_mux/input/navi", we will reuse it later in the code. Now let's find out the type of this topic using:
+
+.. code-block:: cpp
+
+    rostopic info cmd_vel_mux/input/navi
+ 
+ We find that this topic is of type geometry_msgs/Twist, we will have to add it in the includes. You can search online for more infos about it.
+
 .. code-block:: cpp
 
     #include "ros/ros.h"
@@ -119,9 +133,9 @@ Create a handle to this process node. The first NodeHandle created will actually
 
 .. code-block:: cpp
 
-    ros::Publisher pub = nh.advertise<geometry_msgs::Twist>("/cmd_vel", 1000)
+    ros::Publisher pub = nh.advertise<geometry_msgs::Twist>("/cmd_vel_mux/input/navi", 1000)
 
-Tell the master that we are going to be publishing a message of type :code:`geometry_msgs/Twist` on the topic :code:`/cmd_vel`. This lets the master tell any nodes listening on :code:`/cmd_vel` that we are going to publish data on that topic. The second argument is the size of our publishing queue. In this case if we are publishing too quickly it will buffer up a maximum of 1000 messages before beginning to throw away old ones. 
+Tell the master that we are going to be publishing a message of type :code:`geometry_msgs/Twist` on the topic :code:`/cmd_vel_mux/input/navi`. This lets the master tell any nodes listening on :code:`/cmd_vel` that we are going to publish data on that topic. The second argument is the size of our publishing queue. In this case if we are publishing too quickly it will buffer up a maximum of 1000 messages before beginning to throw away old ones. 
 
 
 .. code-block:: cpp
@@ -130,7 +144,6 @@ Tell the master that we are going to be publishing a message of type :code:`geom
 
 A :code:`ros::Rate` object allows you to specify a frequency that you would like to loop at. It will keep track of how long it has been since the last call to :code:`Rate::sleep()`, and sleep for the correct amount of time.
 .. note::
-
     In this case we tell it we want to run at 10Hz.
 
 .. code-block:: cpp
@@ -139,7 +152,7 @@ A :code:`ros::Rate` object allows you to specify a frequency that you would like
     msg.linear.x = double(0.3);
     msg.angular.z = double(0.1);
 
-We create a message of type Twist that we fill with informations. Here 0.3 m/s for x and 0.1 m/s for the angular velocity. The other four fields of Twist for the linear and angular velocity are are ignored by turtlesim, and set to 0 by default. 
+We create a message of type Twist that we fill with informations. Here 0.03 m/s for x and 0.03 m/s for the angular velocity. The other four fields of Twist for the linear and angular velocity are are ignored by turtlesim, and set to 0 by default. 
 
 .. code-block:: cpp
 
@@ -163,6 +176,7 @@ Calling :code:`ros::spinOnce()` here is not necessary for this simple program, b
 
 Creating a Subscriber
 **********
+Here we want to access the data from the laser. We again have to understand which topic it is and the type of it. Once you have found these infos you do :code:`rostopic echo /name_of_the_topic`.
 
 Let's create from command line a new file, named *subscriber.cpp*.
 Here's the template file you can use:
@@ -253,10 +267,19 @@ The generated CMakeLists.txt should look like this (with modifications from the 
 
 Examining the Simple Publisher and Subscriber
 **********
+First you do a :code:`catkin_make` to compile everything.
 
-Now you can do :code:`catkin_make` to compile everything.
+Then open a terminal: 
 
-Make sure that a roscore is up and running launching :code:`roscore`, :code:`turtlebot_package subscriber` and then
+.. code-block::
+  
+   $ cd turtlebot_ws/
+   $ source devel/setup.bash
+   $ roslaunch turtlebot_bringup minimal.launch
+
+
+In an other terminal: 
+!! Be carefull here because your robot should start moving !!
 
 .. code-block::
   
