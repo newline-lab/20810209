@@ -130,6 +130,7 @@ Tell the master that we are going to be publishing a message of type :code:`geom
 
 A :code:`ros::Rate` object allows you to specify a frequency that you would like to loop at. It will keep track of how long it has been since the last call to :code:`Rate::sleep()`, and sleep for the correct amount of time.
 .. note::
+
     In this case we tell it we want to run at 10Hz.
 
 .. code-block:: cpp
