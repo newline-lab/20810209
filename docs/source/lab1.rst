@@ -41,9 +41,8 @@ Let create a file in the package that you created for this course:
 
 .. code-block:: 
 
-  $ cd turtlebot_ws/
-  $ source devel/setup.bash
-  $ rosrun turtlebot_package publisher
+  $ cd turtlebot_ws/src
+  $ touch publisher.cpp
   
 In this file we will write the code related to the publisher's node:
 
