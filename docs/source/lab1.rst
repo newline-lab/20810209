@@ -9,6 +9,7 @@ Overview
 In this laboratory we will create a system to collect data from a lidar to make the Turtlebot move in such a way as to avoid obstacles.
 
 .. info:: 
+
   While following the step-by-step tutorials, please take your time to think about what you are doing and what happens in each step, with the help of Google if necessary.
   
 Creating a ros package
