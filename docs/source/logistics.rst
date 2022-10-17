@@ -22,8 +22,7 @@ Let's create and build a catkin workspace with all the turtlebot materials insid
 
       sudo chmod +x ws_install.sh
       ./ws_install.sh
-
-Set up the Turlebot workspace
+Launch the Turlebot minimal setup
 --------
 
 Let's launch the turtlebot bringup:
