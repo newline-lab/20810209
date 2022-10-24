@@ -3,7 +3,8 @@ Lab2: URDF and xacro files
 
 In this tutorial, we’re going to build a visual model of a double inverted pendulum robot called RRBot. You will learn how to articulate the model, add in some physical properties, generate neater code with xacro and make it move in Gazebo.
 
-Before continuing, download the needed files from here: 
+Before continuing, download the needed files from here:
+
 :download:`urdf tutorial <files/urdf_tutorial.zip>`
 
 . Then create a new package using the knwon ``rosbash`` commands and insert the downloaded file in the rigth package`s folders.
