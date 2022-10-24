@@ -200,7 +200,6 @@ Here is the code for our new base link.
 In many cases, you’ll want the collision geometry and origin to be exactly the same as the visual geometry and origin.
 
 .. note::
-
   Now it's your turn, add the collision for **llink2** and **link3**.
   
 Inetria
