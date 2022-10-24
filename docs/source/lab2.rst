@@ -29,6 +29,7 @@ To examine the model, launch the display.launch file:
   $ roslaunch urdf_tutorial display.launch model:='\$(find urdf_tutorial)/urdf/01-myfirst.urdf'
 
 Your model is now displayed in rviz:
+
 .. image:: files/one_shape.png
 
 
@@ -78,7 +79,7 @@ We can launch this new urdf with the following command:
 
 You should have something like this in rviz:
 
-.. image:: files/multiple_shape.png
+.. image:: files/multiple_shapes.png
 
 Before moving on to the next section, let's add a final **link3** to our robot. The size is **0.1 0.1 1**, the origin for the link is **0 0 0.45** and for the **joint2** it's **0 0.1 0.90**.
 
