@@ -7,6 +7,7 @@
     logistics
     lab0
     lab1
+    lab2
     
 This repository hosts lab materials for 20810209 Complex robotic systems laboratory class at Universtà degli studi Roma Tre.
     
