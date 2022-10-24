@@ -317,7 +317,7 @@ Your urdf should now look like this:
 * The 3x3 rotational inertia matrix is specified with the inertia element. Since this is symmetrical, it can be represented by only 6 elements.
 
 Using xacro
-********
+======
 
 In this section, we take a look at all the shortcuts to help reduce the overall size of the URDF file and make it easier to read and maintain. For that we are going to use the xacro. As its name implies, xacro is a macro language for XML. The xacro program runs all of the macros and outputs the result. Typical usage looks something like this: 
 
