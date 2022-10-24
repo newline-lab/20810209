@@ -5,7 +5,7 @@ In this tutorial, we’re going to build a visual model of a double inverted pen
 
 Before continuing, download the needed files from here:
 
-:download:`urdf tutorial <files/urdf_tutorial.zip>`
+:download:`zip <files/urdf_tutorial.zip>`
 
 . Then create a new package using the knwon ``rosbash`` commands and insert the downloaded file in the rigth package`s folders.
 
