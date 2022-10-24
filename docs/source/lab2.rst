@@ -200,8 +200,9 @@ Here is the code for our new base link.
 In many cases, you’ll want the collision geometry and origin to be exactly the same as the visual geometry and origin.
 
 .. note::
-  Now it's your turn, add the collision for **llink2** and **link3**.
+  Now it's your turn, add the collision for **link2** and **link3**.
   
+
 Inetria
 ******
 In order to get your model to simulate properly, you need to define several physical properties of your robot, i.e. the properties that a physics engine like Gazebo would need. 
