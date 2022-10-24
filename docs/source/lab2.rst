@@ -3,9 +3,10 @@ Lab2: URDF and xacro files
 
 In this tutorial, we’re going to build a visual model of a double inverted pendulum robot called RRBot. You will learn how to articulate the model, add in some physical properties, generate neater code with xacro and make it move in Gazebo.
 
-Before continuing, download the needed files from here: :download:`zip <files/urdf_tutorial.zip>`
+Before continuing, download the needed files from here: :download:`zip <files/urdf_tutorial.zip>` . Then create put the package in your workspace and build it with the known ``rosbash`` command.
 
-. Then create a new package using the knwon ``rosbash`` commands and insert the downloaded file in the rigth package`s folders.
+.. note::
+	remember to source the project!
 
 
 One shape
@@ -332,7 +333,7 @@ It does three things that are very helpful.
 
 At the top of the URDF file, you must specify a namespace in order for the file to parse properly. For example, these are the first two lines of a valid xacro file: 
 
-.. code-block::
+.. code-block:: xml
 
   <?xml version="1.0"?>
   <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="firefighter">
@@ -342,7 +343,7 @@ Constants
 
 Let's take a quick look at our **base_link**:
 
-.. code-block::
+.. code-block:: xml
   
   <link name="base_link">
     <visual>
@@ -367,5 +368,158 @@ Let's take a quick look at our **base_link**:
     </inertial>
   </link>
 
-We can see that some information are getting repeated, the width and the height of our links for example. We can use a xacro to pass them as a constant parameter. 
+We can see that some information are getting repeated, the width and the height of our links for example. We can use a xacro to pass them as a constant parameter. Let's start with the constants, we have the height and the width.
 
+.. code-block:: xml
+
+  <xacro:property name="width" value="0.1" />
+  <xacro:property name="height1" value="2" />
+  <xacro:property name="height2" value="1" />
+
+This is the way to use them in the urdf:
+
+.. code-block:: xml
+  <link name="base_link">
+  <visual>
+      <origin xyz="0 0 1" rpy="0 0 0"/>
+      <geometry>
+        <box size="${width} ${width} ${height1}"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 1" rpy="0 0 0"/>
+      <geometry>
+	      <box size="${width} ${width} ${height1}"/>
+      </geometry>
+    </collision>  
+
+    <xacro:default_inertial mass="2"/>
+  </link>
+  
+
+
+Now you can look at the urdf and try to add an other constant that is repeated.
+If you closely you will see that the inertia is being repeated, we can create a xacro for that and here the way to write it:
+
+.. code-block:: xml
+
+  <xacro:macro name="default_inertial" params="mass">
+    <inertial>
+      <mass value="${mass}" />
+     <inertia ixx="0.08" ixy="0.0" ixz="0.0" iyy="0.08" iyz="0.0" izz="0.001"/>
+    </inertial>
+  </xacro:macro>
+
+
+Now your urdf should look like that, with ``xmlns:xacro="http://ros.org/wiki/xacro"`` after the name of your robot:
+
+.. code-block:: xml
+
+  <?xml version="1.0"?>
+  <robot name="macroed" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:property name="width" value="0.1" />
+  <xacro:property name="height1" value="2" />
+  <xacro:property name="height2" value="1" />
+  <xacro:property name="constant" value="0.45" />
+
+  <xacro:macro name="default_inertial" params="mass">
+    <inertial>
+      <mass value="${mass}" />
+     <inertia ixx="0.08" ixy="0.0" ixz="0.0" iyy="0.08" iyz="0.0" izz="0.001"/>
+    </inertial>
+  </xacro:macro>
+
+   <material name="blue">
+    <color rgba="0 0 0.8 1"/>
+  </material>
+
+  <material name="white">
+    <color rgba="1 1 1 1"/>
+  </material>
+
+  <material name="red">
+    <color rgba="1 0 0 1"/>
+  </material>
+
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 1" rpy="0 0 0"/>
+      <geometry>
+        <box size="${width} ${width} ${height1}"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 1" rpy="0 0 0"/>
+      <geometry>
+	      <box size="${width} ${width} ${height1}"/>
+      </geometry>
+    </collision>  
+
+    <xacro:default_inertial mass="2"/>
+    </link>
+
+  <joint name="joint1" type="continuous">
+    <parent link="base_link"/>
+    <child link="link2"/>
+    <origin xyz="0 0.1 1.95" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <link name="link2">
+    <visual>
+      <origin xyz="0 0 0.45" rpy="0 0 0"/>
+      <geometry>
+        <box size="${width} ${width} ${height2}"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0.45" rpy="0 0 0"/>
+      <geometry>
+	      <box size="${width} ${width} ${height2}"/>
+      </geometry>
+    </collision>
+
+    <xacro:default_inertial mass="1"/>
+  </link>
+
+  <joint name="joint2" type="continuous">
+    <parent link="link2"/>
+    <child link="link3"/>
+    <origin xyz="0 0.1 0.90" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+    <link name="link3">
+    <visual>
+      <origin xyz="0 0 0.45" rpy="0 0 0"/>
+      <geometry>
+        <box size="${width} ${width} ${height2}"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0.45" rpy="0 0 0"/>
+      <geometry>
+	      <box size="${width} ${width} ${height2}"/>
+      </geometry>
+    </collision>
+  
+    <xacro:default_inertial mass="1"/>
+  </link>
+
+  </robot>
+
+This file as for extension .urdf.xacro, which means it's a urdf with xacros inside. You can convert this file into a .urdf with the command:
+
+
+.. code-block:: bash
+
+	xacro 05-macroed.urdf.xacro > 05-final.urdf
